@@ -14,9 +14,8 @@ GIT
     travis-sidekiqs (0.0.1)
       sidekiq (~> 2.8.0)
 
-GIT
-  remote: git://github.com/travis-ci/travis-support.git
-  revision: c0add49c71ff3c788b4b7e5b63c11d3896d9847d
+PATH
+  remote: /Users/sven/Development/projects/travis/travis-support
   specs:
     travis-support (0.0.1)
 

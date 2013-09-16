@@ -35,7 +35,7 @@ module Travis
 
     define  :redis   => { :url => 'redis://localhost:6379' },
             :sentry  => { },
-            :metrics => { :report => true }
+            :metrics => { :reporter => 'logger' }
 
     default :_access => [:key]
 

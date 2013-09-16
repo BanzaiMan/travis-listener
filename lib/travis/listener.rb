@@ -30,17 +30,7 @@ module Travis
           end
         end
 
-        if ENV['RACK_ENV'] == "production"
-          puts 'Starting reporter'
-          formatter = lambda do |severity, date, progname, message|
-            "#{message}\n"
-          end
-          logger = Logger.new($stdout)
-          logger.formatter = formatter
-          if Travis.config.metrics.report
-            $metriks_reporter = Metriks::Reporter::Logger.new(:logger => logger, :on_error => lambda { |ex| puts ex })
-          end
-        end
+        Travis::Metrics.setup if ENV['RACK_ENV'] == "production"
       end
 
       def connect

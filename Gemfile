@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'travis-support',  github: 'travis-ci/travis-support'
+# gem 'travis-support',  github: 'travis-ci/travis-support', branch: 'sf-te'
+gem 'travis-support',  path: '/Users/sven/Development/projects/travis/travis-support'
 gem 'travis-sidekiqs', github: 'travis-ci/travis-sidekiqs', require: nil
 
 gem 'metriks',         '~> 0.9.7.3'
